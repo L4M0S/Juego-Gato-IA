@@ -32,7 +32,7 @@ function PaintCell(x,y)
 		Cross_Sellected_y=y;
 	}
 
-	if(turn==ball)
+	if(turn=="ball")
 	{
 		turn="cross"
 	}
@@ -53,6 +53,11 @@ function ClearBoard()
 	}
 }
 
+function SelectCell(x,y)
+{
+	PaintCell(x,y);
+	SearchMove();
+}
 
 function autoplay()
 {
@@ -70,6 +75,7 @@ function autoplay()
 	Ball_Sellected_y=4;
 
 	ClearBoard();
+	SearchMove();
 }
 
 autoplay();
