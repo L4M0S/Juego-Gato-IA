@@ -9,7 +9,7 @@ var Ball_Sellected_y;
 
 function ClearCell(x,y)
 {
-	board[i][j] = 0;
+	board[x][y] = 0;
 	cell=document.getElementById("c"+x+y);
 	cell.innerHTML = "";
 }
@@ -49,6 +49,27 @@ function ClearBoard()
 		for(j=0; j<3; j++)
 		{
 			ClearCell(i,j);
+		}
+	}
+}
+
+function CheckCell(x,y)
+{
+	crosses= CheckTurn_Count(2);
+	if(crosses==3) 
+	{
+		if(board[x][y]==2)
+		{
+			Cross_Sellected_x=x;
+			Cross_Sellected_y=y;
+			ClearCell(x,y);
+		}
+	}
+	else
+	{
+		if(board[x][y]==0 && DifMov(x,y))
+		{
+			SelectCell(x,y);
 		}
 	}
 }
