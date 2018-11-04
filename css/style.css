@@ -1,9 +1,72 @@
-*
-{
-	background-color: #F5F5F5;
-}
-
 body
 {
 	font-family: 'Amaranth', 'sans-serif';
+	font-size: 16px;
+	color: #776E65;
+	background-color: #F5F5F5;
+}
+
+#content:
+{
+	width: 100%;
+	margin: 0 auto;
+}
+
+#game
+{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+#game h1
+{
+	font-size: 3em;
+	text-align: center;
+	width: 100%;
+	margin: 20px;
+}
+
+#content_board
+{
+	text-align: center;
+}
+
+#board
+{
+	width: auto;
+	position: relative;
+	padding: 3px 0px 0px 3px;
+}
+
+#board .row
+{
+	width: 100%;
+	padding: 0px;
+}
+
+#board .row .cell
+{
+	padding: 0px;
+	border: 2px solid black;
+	margin: -3px;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	position: relative;
+}
+#board .row .cell:hover
+{
+	box-shadow: inset 0px 0px 6px green;
+	box-shadow: inset 0px 0px 2px green;
+	box-shadow: inset 0px 0px 15px green;
+}
+
+#board .row .cell img
+{
+	position: absolute;
+	width: 90%;
+	height: 90%;
+	top: 5%;
+	left: 5%;
 }
